@@ -1,0 +1,24 @@
+<div class="container  w-75 my-3">
+  <h1 class="text-center ">▶Puedo Calcularlo todo▶</h1>
+<div class="row ">
+  <div class="col-4  borde ">
+    <h2 class="text-center">Digita los numeros ↧</h2>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Numero 1:</label>
+        <input type="number" #numero1 class="form-control" id="numero1">
+    </div>
+    <div class="mb-3 ">
+      <label for="exampleFormControlInput1" class="form-label">Numero 2:</label>
+      <input type="number" #numero2 class="form-control" id="numero2">
+  </div>
+  
+
+  <div class="botones">
+    <button type="button" (click)="operacion(numero1.value, numero2.value, '+')" class="btn btn-primary btn-sx">suma</button>
+    <button type="button" (click)="operacion(numero1.value, numero2.value, '-')" class="btn btn-secondary btn-sx">resta</button>
+    <button type="button" (click)="operacion(numero1.value, numero2.value, '*')" class="btn btn-success btn-sx">multiplica</button>
+    <button type="button" (click)="operacion(numero1.value, numero2.value, '/')" class="btn btn-danger btn-sx">divide</button>
+  </div>
+
+  <h3>El resultado es: {{resultado}}</h3>
+</div>
